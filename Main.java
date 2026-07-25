@@ -15,10 +15,6 @@ public class Main {
     private static final String PURPLE = "\u001B[35m";
     private static final String ORANGE = "\u001B[38;5;208m";
 
-    // bg color
-    private static final String RED_BG = "\u001B[41m";
-    private static final String GREEN_BG = "\u001B[42m";
-
     // messages
     private static final ArrayList<String> lossMessages = new ArrayList<>();
     private static final ArrayList<String> winMessages = new ArrayList<>();
@@ -62,14 +58,11 @@ public class Main {
 
         String[] result = new String[0];
         String[][] megaResult = new String[3][3];
-        String answer = "";
         String[] symbols = new String[15];
 
 
         lossMessages.addAll(loadMessages("messages/loss.txt"));
         winMessages.addAll(loadMessages("messages/wins.txt"));
-        ArrayList<String> streakMessages = loadMessages("messages/streak.txt");
-        System.out.println(new File(".").getAbsolutePath());
         welcomeMessage();
 
         int reels = chooseGameMode(scanner);
@@ -165,10 +158,10 @@ public class Main {
                 survived50Rounds = unlock(survived50Rounds,"Endurance Test", "Touch some grass, bro.");
             }
 
-            if (!welcomeToTheStreets && Math.floor(balance) == 1 || Math.ceil(balance) == 1) {
+            if (!welcomeToTheStreets && (Math.floor(balance) == 1 || Math.ceil(balance) == 1)) {
                 welcomeToTheStreets = unlock(welcomeToTheStreets, "Hit the Bottom", "Welcome to the Streets.");
             }
-            if (!houseHasConcerns && Math.floor(balance) == 1000 || Math.ceil(balance) == 1000) {
+            if (!houseHasConcerns && (Math.floor(balance) == 1000 || Math.ceil(balance) == 1000)) {
                 houseHasConcerns = unlock(houseHasConcerns, "Hit 1k", "The House has concerns.");
             }
 
