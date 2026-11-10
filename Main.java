@@ -5,7 +5,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    private static final String RESET = "\u001B[0m";private static final String BOLD = "\u001B[1m";
+    private static final String RESET = "\u001B[0m";
+    private static final String BOLD = "\u001B[1m";
 
     // text color
     private static final String RED = "\u001B[31m";
