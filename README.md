@@ -14,4 +14,4 @@ just a simple slot machine i wrote for fun
 if you are also struggling with gambling urges, go for it(jk)
 that's it.
 
-[meme.jpeg]
+![](./meme.jpeg)
